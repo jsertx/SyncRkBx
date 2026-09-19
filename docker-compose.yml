@@ -1,0 +1,18 @@
+services:
+  slskd:
+    image: slskd/slskd:latest
+    container_name: slskd
+    environment:
+      - SLSKD_REMOTE_CONFIGURATION=true
+      - SLSKD_SLSK_USERNAME=${SLSKD_SLSK_USERNAME}
+      - SLSKD_SLSK_PASSWORD=${SLSKD_SLSK_PASSWORD}
+      - SLSKD_API_KEY=${SLSKD_API_KEY}
+    ports:
+      - "5030:5030"   # web UI / REST API (http)
+      - "5031:5031"   # web UI (https)
+      - "50300:50300" # soulseek P2P listen port
+    volumes:
+      - ./slskd/app:/app
+      - ./slskd/downloads:/app/downloads
+      - ./slskd/incomplete:/app/incomplete
+    restart: unless-stopped

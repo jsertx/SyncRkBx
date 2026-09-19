@@ -1,0 +1,23 @@
+{
+  "spotify": {
+    "client_id": "YOUR_SPOTIFY_CLIENT_ID",
+    "client_secret": "YOUR_SPOTIFY_CLIENT_SECRET",
+    "redirect_uri": "http://127.0.0.1:8888/callback"
+  },
+  "slskd": {
+    "host": "http://localhost:5030",
+    "api_key": "YOUR_SLSKD_API_KEY"
+  },
+  "soulseek": {
+    "search_timeout_seconds": 12,
+    "max_retries": 2,
+    "allowed_extensions": [".mp3", ".flac"]
+  },
+  "paths": {
+    "download_folder": "./slskd/downloads",
+    "library_folder": "/CAMBIA/ESTO/carpeta_musica"
+  },
+  "syncPlaylists": [
+    "https://open.spotify.com/playlist/37i9dQZF1DXxxxxxx"
+  ]
+}

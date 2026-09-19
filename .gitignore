@@ -1,0 +1,11 @@
+config.json
+.env
+slskd/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.db
+*.db-journal
+.spotify_token_cache
+.cache
